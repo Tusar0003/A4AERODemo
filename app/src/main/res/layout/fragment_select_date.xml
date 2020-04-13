@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.SelectDateFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/button_done"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingLeft="@dimen/_16sdp"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/image_view_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@android:color/white"
+                    android:text="Select Date" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_departure"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:background="@drawable/white_square_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_departure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="Departure" />
+
+                    <TextView
+                        android:id="@+id/text_view_departure_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_15sdp"
+                        android:text="Select Date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_return"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:background="@drawable/white_transparent_square_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="Return" />
+
+                    <TextView
+                        android:id="@+id/text_view_return_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:text="Select Date" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.andrewjapar.rangedatepicker.CalendarPicker
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:scrollbarStyle="outsideOverlay"
+                app:pickerType="range" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14sdp"
+            android:text="Done" />
+    </RelativeLayout>
+
+</layout>

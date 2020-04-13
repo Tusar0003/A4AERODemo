@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/bookFlightFragment">
+    <fragment
+        android:id="@+id/bookFlightFragment"
+        android:name="com.example.a4aerodemo.view.fragment.BookFlightFragment"
+        android:label="fragment_book_flight"
+        tools:layout="@layout/fragment_book_flight" >
+        <action
+            android:id="@+id/action_bookFlightFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_bookFlightFragment_to_cabinClassFragment"
+            app:destination="@id/cabinClassFragment" />
+        <action
+            android:id="@+id/action_bookFlightFragment_to_selectDateFragment"
+            app:destination="@id/selectDateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectDateFragment"
+        android:name="com.example.a4aerodemo.view.fragment.SelectDateFragment"
+        android:label="fragment_select_date"
+        tools:layout="@layout/fragment_select_date" >
+        <argument
+            android:name="isDeparture"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.a4aerodemo.view.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="isDeparture"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/cabinClassFragment"
+        android:name="com.example.a4aerodemo.view.fragment.CabinClassFragment"
+        android:label="fragment_cabin_class"
+        tools:layout="@layout/fragment_cabin_class" />
+</navigation>
